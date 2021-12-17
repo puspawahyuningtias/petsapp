@@ -23,7 +23,7 @@ function App() {
     <div>
       <Navbar expand="lg" fixed="top" bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">PATS</Navbar.Brand>
+          <Navbar.Brand href="#">PATS</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Categories categories={categories} filterItems={filterItems} />
