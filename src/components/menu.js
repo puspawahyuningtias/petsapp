@@ -15,17 +15,6 @@ function Menu({ menuItems }) {
       {menuItems.map((menuItem) => {
         const { id, breed, img, desc } = menuItem;
         return (
-          // <article key={id}>
-          //   <div className="menuImg">
-          //     <img src={img} alt={breed} />
-          //   </div>
-          //   <div className="info">
-          //     <header>
-          //       <h4>{breed.toUpperCase()}</h4>
-          //     </header>
-          //     <p>{desc}</p>
-          //   </div>
-          // </article>
           <MDBCol>
             <MDBCard key={id}>
               <MDBCardImage src={img} alt={breed} position="top" />
