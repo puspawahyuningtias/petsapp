@@ -1,28 +1,26 @@
 import React, { useState } from "react";
-import "./App.css";
 import Categories from "./components/categories";
 import Menu from "./components/menu";
-import menu from "./components/data";
-import "./components/style.css";
+import data from "./components/data";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container } from "react-bootstrap";
 
-const allCategories = ["all", ...new Set(menu.map((item) => item.category))];
+const allCategories = ["all", ...new Set(data.map((item) => item.category))];
 
 function App() {
-  const [menuItems, setMenuItems] = useState(menu);
+  const [menuItems, setMenuItems] = useState(data);
   const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
     if (category === "all") {
-      setMenuItems(menu);
+      setMenuItems(data);
       return;
     }
-    const newItems = menu.filter((item) => item.category === category);
+    const newItems = data.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
   return (
-    <div className="">
+    <div>
       <Navbar expand="lg" fixed="top" bg="primary" variant="dark">
         <Container>
           <Navbar.Brand href="#home">PATS</Navbar.Brand>
