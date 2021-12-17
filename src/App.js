@@ -5,9 +5,7 @@ import Menu from "./components/menu";
 import menu from "./components/data";
 import "./components/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
 
 const allCategories = ["all", ...new Set(menu.map((item) => item.category))];
 
@@ -24,7 +22,7 @@ function App() {
     setMenuItems(newItems);
   };
   return (
-    <div className="App">
+    <div className="">
       <Navbar expand="lg" fixed="top" bg="primary" variant="dark">
         <Container>
           <Navbar.Brand href="#home">PATS</Navbar.Brand>
@@ -34,8 +32,11 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className="pt-5">
-        <Menu menuItems={menuItems} />
+
+      <div className="pt-5 mt-5">
+        <Container>
+          <Menu menuItems={menuItems} />
+        </Container>
       </div>
     </div>
   );

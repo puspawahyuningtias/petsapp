@@ -1,25 +1,43 @@
 import React from "react";
+import {
+  MDBCard,
+  MDBCardImage,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBRow,
+  MDBCol,
+} from "mdb-react-ui-kit";
 
 function Menu({ menuItems }) {
   return (
-    <section className="menuList">
+    <MDBRow className="row-cols-1 row-cols-md-3 g-4">
       {menuItems.map((menuItem) => {
         const { id, breed, img, desc } = menuItem;
         return (
-          <article key={id}>
-            <div className="menuImg">
-              <img src={img} alt={breed} />
-            </div>
-            <div className="info">
-              <header>
-                <h4>{breed.toUpperCase()}</h4>
-              </header>
-              <p>{desc}</p>
-            </div>
-          </article>
+          // <article key={id}>
+          //   <div className="menuImg">
+          //     <img src={img} alt={breed} />
+          //   </div>
+          //   <div className="info">
+          //     <header>
+          //       <h4>{breed.toUpperCase()}</h4>
+          //     </header>
+          //     <p>{desc}</p>
+          //   </div>
+          // </article>
+          <MDBCol>
+            <MDBCard key={id}>
+              <MDBCardImage src={img} alt={breed} position="top" />
+              <MDBCardBody>
+                <MDBCardTitle>{breed.toUpperCase()}</MDBCardTitle>
+                <MDBCardText>{desc}</MDBCardText>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
         );
       })}
-    </section>
+    </MDBRow>
   );
 }
 
