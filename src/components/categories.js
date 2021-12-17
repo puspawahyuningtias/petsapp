@@ -1,16 +1,18 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Nav } from "react-bootstrap";
 
 function Categories({ categories, filterItems }) {
   return (
-    <div className="btn-container">
+    <Nav className="me-auto">
       {categories.map((category, index) => {
         return (
-          <button key={index} onClick={() => filterItems(category)}>
+          <Nav.Link key={index} onClick={() => filterItems(category)}>
             {category.toUpperCase()}
-          </button>
+          </Nav.Link>
         );
       })}
-    </div>
+    </Nav>
   );
 }
 

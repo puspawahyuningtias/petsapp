@@ -45,19 +45,3 @@ header h4 {
   font-size: 15px;
   padding-top: 15px;
 }
-.btn-container {
-  margin: 25px 0;
-}
-.btn-container button {
-  color: #003cff;
-  padding: 5px 10px;
-  margin: 0px 10px;
-  border: 2px solid #003cff;
-  border-radius: 4px;
-  transition: all 0.4s;
-}
-
-.btn-container button:hover {
-  background: #003cff;
-  color: #fff;
-}
